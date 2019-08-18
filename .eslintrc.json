@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "jsx": true,
+    "useJSXTextNode": true
+  },
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
+    "react-hooks"
+  ],
+  "rules": {
+  
+    // Typescript
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+
+    // React
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+  
+    // Style
+    "semi": ["error", "always"],
+    "semi-style": ["error", "last"]
+  }
+}

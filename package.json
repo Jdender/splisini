@@ -1,7 +1,7 @@
 {
   "name": "splisini",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "src/index.ts",
   "description": "",
   "repository": "https://github.com/Splist/splisini.git",
   "homepage": "https://github.com/Splist/splisini#readme",
@@ -12,5 +12,12 @@
   "license": "AGPL-3.0",
   "scripts": {},
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "parcel-bundler": "^1.12.3",
+    "typescript": "^3.5.3"
+  }
 }
