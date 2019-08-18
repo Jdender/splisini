@@ -2,7 +2,7 @@
     "compilerOptions": {
         "locale": "en",
         "target": "es2018",
-        "lib": ["esnext"],
+        "lib": ["esnext", "dom"],
         "module": "commonjs",
         "moduleResolution": "node",
         "outDir": "dist",
