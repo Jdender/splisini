@@ -1,0 +1,30 @@
+
+.container {
+    display: grid;
+
+    /* Add responsive-ness later (aka css is hard)*/
+    grid-template-rows: 500px 50px;
+}
+
+.output {
+    background-color: #161f27;
+
+    list-style-type: none;
+  
+    margin-right: 6px;
+    margin-bottom: 6px;
+    padding: 10px;
+  
+    border: none;
+    border-radius: 6px;
+    outline: none;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    overflow-y: scroll;
+}
+
+/* .input {
+
+} */
