@@ -42,6 +42,7 @@
   
     // Style
     "semi": ["error", "always"],
-    "semi-style": ["error", "last"]
+    "semi-style": ["error", "last"],
+    "no-trailing-spaces": "error"
   }
 }

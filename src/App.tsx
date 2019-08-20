@@ -2,7 +2,7 @@ import { createElement, useReducer, Fragment } from 'react';
 import { Output } from './Output';
 import { Input } from './Input';
 
-export type Action = 
+export type Action =
     { type: 'push', value: string } |
     { type: 'flush' };
 

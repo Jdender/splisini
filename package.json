@@ -13,7 +13,8 @@
   "scripts": {
     "up": "parcel src/index.html --port 8081",
     "build": "parcel build src/index.html",
-    "lint": "eslint src/**/*.ts"
+    "lint": "eslint src/**/*.tsx",
+    "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
     "react": "^16.9.0",

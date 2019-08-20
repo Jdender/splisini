@@ -28,6 +28,6 @@ export const Input: FC<Props> = ({ dispatch }) => {
 
             setContent('');
         }}
-    
+
     />;
 };

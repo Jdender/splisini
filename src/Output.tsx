@@ -5,7 +5,7 @@ interface Props {
 }
 
 export const Output: FC<Props> = ({ buffer }) => {
-    
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const ul = useRef<HTMLUListElement>(null as any);
 
@@ -24,7 +24,7 @@ export const Output: FC<Props> = ({ buffer }) => {
         className="output"
         ref={ul}
 
-        children={buffer.map(str => 
+        children={buffer.map(str =>
             <li>{str}</li>
         )}
     />;
