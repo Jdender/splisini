@@ -17,6 +17,8 @@ export const Input: FC<Props> = ({ dispatch }) => {
         value={content}
         onChange={e => setContent(e.target.value)}
 
+        placeholder="> Message / Command"
+
         onKeyPress={e => {
 
             if (e.key !== 'Enter') return;

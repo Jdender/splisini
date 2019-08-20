@@ -22,7 +22,10 @@ const reducer = (state: string[], action: Action) => {
 
 export const App = () => {
 
-    const [buffer, dispatch] = useReducer(reducer, []);
+    const defaul = [...Array(30).keys()]
+        .map(i => `Doot ${i}`);
+
+    const [buffer, dispatch] = useReducer(reducer, defaul);
 
     return <div className="container">
 

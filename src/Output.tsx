@@ -24,8 +24,8 @@ export const Output: FC<Props> = ({ buffer }) => {
         className="output"
         ref={ul}
 
-        children={buffer.map(str =>
-            <li>{str}</li>
+        children={buffer.map((str, i) =>
+            <li key={i}>{str}</li>
         )}
     />;
 };
