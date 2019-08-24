@@ -1,11 +1,10 @@
-import { createElement, Dispatch, FC, useState } from 'react';
-import { Action } from './App';
+import { createElement, FC, useState } from 'react';
 
 interface Props {
-    dispatch: Dispatch<Action>;
+    updateBuffer: (f: (draft: string[]) => void | string[]) => void;
 }
 
-export const Input: FC<Props> = ({ dispatch }) => {
+export const Input: FC<Props> = ({ updateBuffer }) => {
 
     const [content, setContent] = useState('');
 
@@ -23,9 +22,8 @@ export const Input: FC<Props> = ({ dispatch }) => {
 
             if (e.key !== 'Enter') return;
 
-            dispatch({
-                type: 'push',
-                value: content,
+            updateBuffer(draft => {
+                draft.push(content);
             });
 
             setContent('');
