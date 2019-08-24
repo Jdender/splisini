@@ -1,4 +1,4 @@
-import { createElement, FC, useRef, useEffect } from 'react';
+import { createElement, FC, useRef, useLayoutEffect } from 'react';
 
 interface Props {
     buffer: string[];
@@ -6,17 +6,11 @@ interface Props {
 
 export const Output: FC<Props> = ({ buffer }) => {
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const ul = useRef<HTMLUListElement>(null as any);
 
     // Scroll to bottom on new li added
-    useEffect(() => {
-
-        const observer = new MutationObserver(() => ul.current.scrollTop = ul.current.scrollHeight);
-
-        observer.observe(ul.current, { childList: true });
-
-        return () => observer.disconnect();
+    useLayoutEffect(() => {
+        ul.current.scrollTop = ul.current.scrollHeight;
     });
 
     return <ul
