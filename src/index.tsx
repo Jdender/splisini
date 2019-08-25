@@ -1,15 +1,17 @@
 import { createElement, createContext } from 'react';
 import { render } from 'react-dom';
 import { App } from './App';
-import { createClient, Client } from './client';
+import { Client } from './client/Client';
 
 export const clientContext = createContext<Client>(null as any);
 
 void async function() {
 
-    const client = await createClient({
+    const client = new Client({
         baseURL: 'http://localhost:8080/',
     });
+
+    await client.login();
 
     const Root = () => (
         <clientContext.Provider value={client}>
