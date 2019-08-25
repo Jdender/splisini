@@ -11,6 +11,8 @@ For a more full fledged client, check out [Splist Client](https://github.com/Spl
 
 * **Jdender~** - *Lead Developer* - [GitHub](https://github.com/Jdender)
 
+* **Grey** - *Lead Developer* - [GitHub](https://github.com/Chronomly)
+
 Also, check the list of [contributors](/contributors) who did minor contributions.
 
 ## License
