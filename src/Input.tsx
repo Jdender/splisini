@@ -1,12 +1,24 @@
-import { createElement, FC, useState } from 'react';
+import { createElement, FC, useState, useContext } from 'react';
+import { handleCommand, PREFIX } from './commands';
+import { UpdateBufferType } from './App';
+import { clientContext } from '.';
 
 interface Props {
-    updateBuffer: (f: (draft: string[]) => void | string[]) => void;
+    updateBuffer: UpdateBufferType;
 }
 
 export const Input: FC<Props> = ({ updateBuffer }) => {
 
+    const client = useContext(clientContext);
+
     const [content, setContent] = useState('');
+
+    const handleMessage = () => {
+
+        updateBuffer(draft => {
+            draft.push(content);
+        });
+    };
 
     return <input
 
@@ -22,8 +34,12 @@ export const Input: FC<Props> = ({ updateBuffer }) => {
 
             if (e.key !== 'Enter') return;
 
-            updateBuffer(draft => {
-                draft.push(content);
+            if (!content.startsWith(PREFIX)) handleMessage();
+
+            else handleCommand({
+                message: content,
+                client,
+                updateBuffer,
             });
 
             setContent('');

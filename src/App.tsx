@@ -3,6 +3,8 @@ import { Output } from './Output';
 import { Input } from './Input';
 import { useImmer } from 'use-immer';
 
+export type UpdateBufferType = (f: (draft: string[]) => void | string[]) => void;
+
 export const App = () => {
 
     const defaul = [...Array(30).keys()]
