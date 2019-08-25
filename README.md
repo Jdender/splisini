@@ -7,6 +7,12 @@ This projects primary purpose is aiding in the development of [NodeRoot](https:/
 
 For a more full fledged client, check out [Splist Client](https://github.com/Splist/splistclient).
 
-##
+## Authors
 
-Splisini is licensed under the terms of [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.txt)
+* **Jdender~** - *Lead Developer* - [GitHub](https://github.com/Jdender)
+
+Also, check the list of [contributors](/contributors) who did minor contributions.
+
+## License
+
+This project is licensed under the AGPL 3.0 License - see the [license](/blob/master/LICENSE) file for details.
